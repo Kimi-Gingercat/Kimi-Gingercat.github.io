@@ -1,26 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 body {
-    font-family: Arial, system-ui;
-    background-color: #be68e0;
+    font-family: system-ui;
+    background-color: #dfbdde;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #4CAF50;
+    font-family: 'Montserrat', san-serif;
+    background-color: #ffffff62;
     color: white;
     padding: 2rem;
     text-align: center;
+    font-size:20px;
+    font-weight: 50;
 }
 
-name{
-    font-size:70px;
-    color:#be68e0;
-    margin-top:20px;
-    font-weight: 200;
-}
+
 
 main {
-    background:#dfbdde;
     padding: 2rem;
     display: flex;
     flex-direction: row;
