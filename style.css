@@ -13,7 +13,7 @@ header {
 }
 
 main {
-    background: linear-gradient(183deg,#b4aced,#e68edd);
+    background:#dfbdde;
     padding: 2rem;
     display: flex;
     flex-direction: row;
@@ -25,6 +25,15 @@ left-section{
     background: #fff;
     height:100%;
     padding: 5px 20px;
+    border-radius: 5px;
+    float: left;
+}
+
+right-section{
+    margin-left: 10px;
+    width:540px;
+    background: #ececee;
+    height:100%;
     border-radius: 5px;
     float: left;
 }
