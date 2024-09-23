@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: Arial, system-ui;
+    background-color: #be68e0;
     margin: 0;
     padding: 0;
 }
@@ -13,10 +13,20 @@ header {
 }
 
 main {
+    background: linear-gradient(183deg,#b4aced,#e68edd);
     padding: 2rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+left-section{
+    width:310px;
+    background: #fff;
+    height:100%;
+    padding: 5px 20px;
+    border-radius: 5px;
+    float: left;
 }
 
 svg {
