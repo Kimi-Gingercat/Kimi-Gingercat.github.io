@@ -25,27 +25,28 @@ function createLine(x1, y1, x2, y2, stroke = 'black', strokeWidth = 0.5) {
   return line
 }
 
-let line = createLine(10,10,40,40, "red",1)
+let line = createLine(10,10,40,40, "yellow",1)
 svg.append(line)
 
 // Function to generate random coordinates within the SVG canvas
-// function getRandomPosition(width, height, padding = 100) {
-//   const x = Math.random() * (width - padding * 2) + padding;
-//   const y = Math.random() * (height - padding * 2) + padding;
-//   return { x, y };
-// }
+// function 
+getRandomPosition(width, height, padding = 100) {
+  const x = Math.random() * (width - padding * 2) + padding;
+  const y = Math.random() * (height - padding * 2) + padding;
+  return { x, y };
+}
 
-// Generate lines and add them to the SVG
-// for (let i = 0; i < lineCount; i++) {
-//   // Get random starting coordinates
-//   const { x: x1, y: y1 } = getRandomPosition(svg.clientWidth, svg.clientHeight);
+//Generate lines and add them to the SVG
+for (let i = 0; i < lineCount; i++) {
+  // Get random starting coordinates
+  const { x: x1, y: y1 } = getRandomPosition(svg.clientWidth, svg.clientHeight);
   
-//   // Calculate the end coordinates based on a random angle
-//   const angle = Math.random() * 360;
-//   const x2 = x1 + lineLength * Math.cos(angle * (Math.PI / 180));
-//   const y2 = y1 + lineLength * Math.sin(angle * (Math.PI / 180));
+  // Calculate the end coordinates based on a random angle
+  const angle = Math.random() * 360;
+  const x2 = x1 + lineLength * Math.cos(angle * (Math.PI / 180));
+  const y2 = y1 + lineLength * Math.sin(angle * (Math.PI / 180));
   
-//   // Use the createLine function to draw the line
-//   let line = createLine(x1, y1, x2, y2);
-//   svg.append(line)
-// }
+  // Use the createLine function to draw the line
+  let line = createLine(x1, y1, x2, y2);
+  svg.append(line)
+}
