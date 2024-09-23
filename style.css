@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
 body {
     font-family: system-ui;
     background-color: #dfbdde;
@@ -41,6 +43,55 @@ right-section{
     height:100%;
     border-radius: 5px;
     float: left;
+}
+
+nav{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    position:fixed;
+    top:0;
+    left:0;
+    height:70px;
+    width:100%;
+}
+
+nav .nav-bar{
+    position:relative;
+    height:100%;
+    max-width:1300px;
+    width:100%;
+    margin: 0 auto;
+    padding:0 30px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+nav .nav-bar .logo a{
+    font-size: 25px;
+    font-weight:500;
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+
+}
+
+.nav-bar .nav-links{
+    display:flex;
+    align-items:center;
+}
+
+.nav-bar .nav-links li{
+    margin:0 5px;
+    list-style: none;
+}
+
+.nav-links li a{
+    position: relative;
+    font-size: 17px;
+    font-weight:500;
+    color:rgb(162, 162, 162);
+    text-decoration: none;
 }
 
 svg {
