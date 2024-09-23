@@ -12,6 +12,13 @@ header {
     text-align: center;
 }
 
+name{
+    font-size:70px;
+    color:#be68e0;
+    margin-top:20px;
+    font-weight: 200;
+}
+
 main {
     background:#dfbdde;
     padding: 2rem;
