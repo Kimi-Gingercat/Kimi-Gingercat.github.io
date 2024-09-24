@@ -9,16 +9,13 @@ body {
 }
 
 header {
+    margin-top: 5%;
     font-family: 'Montserrat', san-serif;
-    background-color: #ffffff62;
-    color: white;
     padding: 2rem;
     text-align: center;
     font-size:20px;
     font-weight: 50;
 }
-
-
 
 main {
     padding: 2rem;
@@ -27,22 +24,10 @@ main {
     flex-wrap: wrap;
 }
 
-left-section{
-    width:310px;
-    background: #fff;
-    height:100%;
-    padding: 5px 20px;
-    border-radius: 5px;
-    float: left;
-}
-
-right-section{
-    margin-left: 10px;
-    width:540px;
-    background: #ececee;
-    height:100%;
-    border-radius: 5px;
-    float: left;
+.p_h{
+    padding:5px;
+    justify-content: space-between;
+    text-decoration: none;
 }
 
 nav{
@@ -54,12 +39,13 @@ nav{
     left:0;
     height:70px;
     width:100%;
+    background-color: rgba(255, 255, 255, 0.258);
 }
 
 nav .nav-bar{
     position:relative;
     height:100%;
-    max-width:1300px;
+    max-width:1200px;
     width:100%;
     margin: 0 auto;
     padding:0 30px;

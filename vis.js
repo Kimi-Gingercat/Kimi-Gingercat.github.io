@@ -5,17 +5,17 @@ const svg = document.getElementById('visArt');
  const minWidth = 20;
 
 // Number of lines to generate (10,000)
- const lineCount = 2000;
+ const circleCount = 2000;
 
 
 
 // Create line function that appends a line to the SVG
-function createCircles(x1, y1, rx, ry, stroke = 'black', strokeWidth = 0.5,fill='none') {
-  const line = document.createElementNS('http://www.w3.org/2000/svg', 'ellipse');
+function createCircles(cx, cy, rx, ry, stroke = 'black', strokeWidth = 0.5,fill='none') {
+  const ellipse = document.createElementNS('http://www.w3.org/2000/svg', 'ellipse');
   
   // Set attributes
-  ellipse.setAttribute('x1', x1);
-  ellipse.setAttribute('y1', y1);
+  ellipse.setAttribute('cx', cx);
+  ellipse.setAttribute('cy', cy);
   ellipse.setAttribute('rx', rx);
   ellipse.setAttribute('ry', ry);
   ellipse.setAttribute('stroke', stroke);
@@ -26,7 +26,7 @@ function createCircles(x1, y1, rx, ry, stroke = 'black', strokeWidth = 0.5,fill=
   return ellipse
 }
 
-let ellipse = createCircles(10,10,40,40, "yellow",1,"lightblue")
+let ellipse = createCircles(50,50,40,40, "yellow",1,"white")
 svg.append(ellipse)
 
 // Function to generate random coordinates within the SVG canvas
@@ -37,17 +37,32 @@ function getRandomPosition(width, height, padding = 100) {
   return { x, y };
 }
 
-// //Generate lines and add them to the SVG
-// for (let i = 0; i < lineCount; i++) {
-//   // Get random starting coordinates
-//   const { x: x1, y: y1 } = getRandomPosition(svg.clientWidth, svg.clientHeight);
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+//Generate lines and add them to the SVG
+for (let i = 0; i < circleCount; i++) {
+  // Get random starting coordinates
+  const { x: cx, y: cy } = getRandomPosition(svg.clientWidth, svg.clientHeight);
   
-//   // Calculate the end coordinates based on a random angle
-//   const angle = Math.random() * 360;
-//   const x2 = x1 + lineLength * Math.cos(angle * (Math.PI / 180));
-//   const y2 = y1 + lineLength * Math.sin(angle * (Math.PI / 180));
+  // Generate random radii for the ellipse
+  const rx = Math.random() * 50 + 10;  // Random radius x (between 10 and 60)
+  const ry = Math.random() * 50 + 10;  // Random radius y (between 10 and 60)
   
-//   // Use the createLine function to draw the line
-//   let line = createLine(x1, y1, x2, y2);
-//   svg.append(line)
-// }
+  // Generate random fill and stroke colors
+  const fillColor = getRandomColor();
+  const strokeColor = getRandomColor();
+  
+  // Generate random stroke width
+  const strokeWidth = Math.random() * 3 + 1; // Random stroke width between 1 and 4
+  
+  // Use the createCircles function to draw the ellipse
+  let ellipse = createCircles(cx, cy, rx, ry, strokeColor, strokeWidth, fillColor);
+  svg.append(ellipse);
+}
