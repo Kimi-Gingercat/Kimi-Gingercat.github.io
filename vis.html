@@ -7,30 +7,28 @@
     <link rel="stylesheet" href="style.css">
     
 </head>
-<body>
-    <header>
-        <h1>Visualizations</h1>
-    </header>
+<body style="background-color: #d9cff9;">
+    <h1 style="color:black;text-align: center;">Visualizations</h1>
 
     <main>
         <!-- SVG visualizations -->
         <svg id="vis" width="800px" height="350px">
             <text x="30" y="30" font-family="Verdana" font-size="25" fill="black" text-anchor="left">Things I did last week </text>
             <!--WoW-->
-            <rect x="50" y="220" width="50" height="100" fill="blue"/>
-            <text x="75" y="210" font-family="Verdana" font-size="12" fill="black" text-anchor="middle">7 </text>
+            <rect id="PlayWoW" x="50" y="220" width="50" height="100" fill="blue"/>
+            <text id="WoWTime" x="75" y="210" font-family="Verdana" font-size="12" fill="black" text-anchor="middle"> </text>
             <text x="75" y="340" font-family="Verdana" font-size="12" fill="black" text-anchor="middle">Play WoW </text>
             <!--Brush teeth-->
-            <rect x="130" y="120" width="50" height="200" fill="orange"/>
-            <text x="155" y="110" font-family="Verdana" font-size="12" fill="black" text-anchor="middle">14 </text>
+            <rect id="Brush" x="130" y="120" width="50" height="200" fill="orange"/>
+            <text id="BrushTime" x="155" y="110" font-family="Verdana" font-size="12" fill="black" text-anchor="middle"> </text>
             <text x="155" y="340" font-family="Verdana" font-size="12" fill="black" text-anchor="middle">Brush teeth </text>
             <!--Eat-->
-            <rect x="210" y="80" width="50" height="240" fill="green"/>
-            <text x="235" y="70" font-family="Verdana" font-size="12" fill="black" text-anchor="middle">16 </text>
+            <rect id="Eat" x="210" y="80" width="50" height="240" fill="green"/>
+            <text id="EatTime" x="235" y="70" font-family="Verdana" font-size="12" fill="black" text-anchor="middle"> </text>
             <text x="235" y="340" font-family="Verdana" font-size="12" fill="black" text-anchor="middle">Eat </text>
             <!--Go to school-->
-            <rect x="290" y="275" width="50" height="45" fill="red"/>
-            <text x="315" y="265" font-family="Verdana" font-size="12" fill="black" text-anchor="middle">3 </text>
+            <rect id="School" x="290" y="275" width="50" height="45" fill="red"/>
+            <text id="SchoolTime" x="315" y="265" font-family="Verdana" font-size="12" fill="black" text-anchor="middle"> </text>
             <text x="315" y="340" font-family="Verdana" font-size="12" fill="black" text-anchor="middle">Go to School </text>
         </svg>
     </main>
