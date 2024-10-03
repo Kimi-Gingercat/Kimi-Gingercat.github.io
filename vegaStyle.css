@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    
+}
+
+#view1a,#view1b,#view2a,#view2b,#view3,#view4 {
+    width: 100%;
+    height: auto;
+    max-width: 1000px;
+}

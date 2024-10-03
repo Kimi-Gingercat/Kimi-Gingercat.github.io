@@ -79,3 +79,5 @@ school.addEventListener('mouseenter', function() {
 school.addEventListener('mouseleave', function() {
     schoolTime.textContent = '';
 });
+
+
