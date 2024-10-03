@@ -104,7 +104,7 @@ async function renderThirdVis() {
         vl.x().fieldN("Platform"),
         vl.y().fieldQ("value").aggregate("sum").axis({ title: "Sales" }),
         vl.xOffset().fieldN("key"), 
-        vl.color().fieldN("key"),
+        vl.color().fieldN("key").legend({title:"Region"}),
         vl.tooltip().fieldN('key')
       )
       .width('container')
@@ -126,8 +126,8 @@ async function renderFourthVis() {
       .encode(
         vl.x().fieldT('Year'), 
         vl.y().aggregate('count'), 
-        vl.order().aggregate('count').sort('ascending'),
         vl.color().fieldN('Genre').scale({ scheme: 'category20' }), 
+        vl.order().aggregate('count').sort('ascending'),
         vl.tooltip().fieldN('Genre')
       )
       .title('Games Published by Electronic Arts Over the Years by Genre')
