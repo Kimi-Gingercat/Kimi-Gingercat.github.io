@@ -29,9 +29,9 @@ async function renderFirstVis2() {
     const vlSpec = vl
       .markBar()
       .data(data)
-      .title("Global Sales by Genre")
+      .title("Global Sales by Platform")
       .encode(
-        vl.y().fieldN("Genre").sort("-x"),
+        vl.y().fieldN("Platform").sort("-x"),
         vl.x().fieldQ("Global_Sales").aggregate("sum")
       )
       .width('container')
