@@ -1,6 +1,6 @@
 //Vis 1a: Global Sales by Platform
 async function renderFirstVis1() {
-    const data = await d3.csv("videogames_wide.csv");
+    const data = await d3.csv("data/videogames_wide.csv");
     console.log(data);
     const vlSpec = vl
       .markBar()
@@ -24,7 +24,7 @@ async function renderFirstVis1() {
 }
 //Vis 1b: Global Sales by Genre
 async function renderFirstVis2() {
-    const data = await d3.csv("videogames_wide.csv");
+    const data = await d3.csv("data/videogames_wide.csv");
     console.log(data);
     const vlSpec = vl
       .markBar()
@@ -45,7 +45,7 @@ async function renderFirstVis2() {
 }
 //Vis 2a: Sales Over Time by Platform 
 async function renderSecVis() {
-    const data = await d3.csv("videogames_wide.csv");
+    const data = await d3.csv("data/videogames_wide.csv");
     console.log(data);
     const vlSpec = vl
       .markCircle()
@@ -69,7 +69,7 @@ async function renderSecVis() {
 
 //Vis 2b: Sales Over Time by Genre 
 async function renderSecVis2() {
-    const data = await d3.csv("videogames_wide.csv");
+    const data = await d3.csv("data/videogames_wide.csv");
     console.log(data);
     const vlSpec = vl
       .markArea()
@@ -92,7 +92,7 @@ async function renderSecVis2() {
 }
 //Visualization 3: Regional Sales vs. Platform
 async function renderThirdVis() {
-    const data = await d3.csv("videogames_wide.csv");
+    const data = await d3.csv("data/videogames_wide.csv");
     console.log(data);
     const vlSpec = vl
       .markBar()
@@ -119,7 +119,7 @@ async function renderThirdVis() {
 }
 //Visualization 4: Games Published by Electronic Arts over the Years by Genre
 async function renderFourthVis() {
-    const data = await d3.csv("videogames_wide.csv");
+    const data = await d3.csv("data/videogames_wide.csv");
     const eaData = data.filter((item)=>{return item.Publisher === "Electronic Arts"});
     const vlSpec = vl
       .markCircle() 
